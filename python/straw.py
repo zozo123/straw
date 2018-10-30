@@ -96,7 +96,7 @@ def readHeader(req, chr1, chr2, posilist):
     found2 = False
     for i in range(0, nChrs):
       name = __readcstr(req)
-      length = struct.unpack('<i',req.read(4))[0]
+      length = struct.unpack('<i',req.read(4))[0]; print(length)
       if (name==chr1):
           found1=True
           chr1ind=i
